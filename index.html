@@ -19,63 +19,104 @@
     <!--Main container spanning the whole device view height.
     Also used to display flex the content-->
     <main
-      class="mn-body outlined container-fluid d-flex align-items-center justify-content-center"
+      class="mn-body container-fluid d-flex align-items-center justify-content-center"
     >
       <!--Container for the content.
       Used as row base for the 2 columns.-->
-      <div class="outlined mn-container row text-center">
+      <div class="mn-container row text-center shadow">
         <!--First column-->
         <div
-          class="outlined column-left col-ssm-6 rounded-4 d-flex flex-column align-items-center p-4"
+          class="column-left col-ssm-6 d-flex flex-column align-items-center p-4"
+          id="column-left"
         >
-          <h6 class="pb-3">Your Result</h6>
+          <h6 class="pb-3" id="title">Your Result</h6>
           <div
-            class="outlined score-circle rounded-circle d-flex align-items-center justify-content-center"
+            class="score-circle rounded-circle d-flex flex-column justify-content-center align-items-center"
           >
-            76
-            <br />
-            of 100
+            <p class="p-0 m-0" id="score-total">76</p>
+            <p class="p-0 mb-0" id="score-max">of 100</p>
           </div>
 
-          <h2 class="pt-3">Great</h2>
-          <p>
+          <h3 class="pt-3">Great</h3>
+          <p id="paragraph">
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
 
         <!--Second column-->
-        <div class="outlined column-right col-ssm-6 rounded-end-4 p-4">
-          <h6 class="pb-3 text-start">Summary</h6>
-          <div class="outlined row d-flex flex-column row-gap-3">
+        <div class="column-right col-ssm-6 p-4">
+          <h6 class="pb-2 ms-2 text-start" style="font-weight: 600">Summary</h6>
+          <div class="row d-flex flex-column row-gap-3 px-3 pb-1">
             <div
-              class="col outlined col-reaction p-2 d-inline-flex justify-content-between"
+              class="col col-reaction p-2 d-inline-flex justify-content-between rounded-3"
             >
-              <div class="stat-name">
-                <img src="/assets/images/icon-reaction.svg" alt="" />
-                Reaction
+              <div class="stat-name d-inline-flex">
+                <img src="." alt="" id="icon-reaction" class="px-2" />
+                <p class="p-0 m-0" id="stat-reaction"></p>
               </div>
-              <div class="stat-score">80 / 100</div>
+              <div class="stat-score d-inline-flex">
+                <p class="p-0 m-0" id="score-reaction"></p>
+                <p class="ps-1 m-0 text-body-secondary">/ 100</p>
+              </div>
             </div>
-            <div class="col outlined">Memory 92 / 100</div>
-            <div class="col outlined">Verbal 61 / 100</div>
-            <div class="col outlined">Visual 72 / 100</div>
+
+            <div
+              class="col col-memory p-2 d-inline-flex justify-content-between rounded-3"
+            >
+              <div class="stat-name d-inline-flex">
+                <img src="." alt="" id="icon-memory" class="px-2" />
+                <p class="p-0 m-0" id="stat-memory"></p>
+              </div>
+              <div class="stat-score d-inline-flex">
+                <p class="p-0 m-0" id="score-memory"></p>
+                <p class="ps-1 m-0 text-body-secondary">/ 100</p>
+              </div>
+            </div>
+
+            <div
+              class="col col-verbal p-2 d-inline-flex justify-content-between rounded-3"
+            >
+              <div class="stat-name d-inline-flex">
+                <img src="." alt="" id="icon-verbal" class="px-2" />
+                <p class="p-0 m-0" id="stat-verbal"></p>
+              </div>
+              <div class="stat-score d-inline-flex">
+                <p class="p-0 m-0" id="score-verbal"></p>
+                <p class="ps-1 m-0 text-body-secondary">/ 100</p>
+              </div>
+            </div>
+
+            <div
+              class="col col-visual p-2 d-inline-flex justify-content-between rounded-3"
+            >
+              <div class="stat-name d-inline-flex">
+                <img src="." alt="" id="icon-visual" class="px-2" />
+                <p class="p-0 m-0" id="stat-visual"></p>
+              </div>
+              <div class="stat-score d-inline-flex">
+                <p class="p-0 m-0" id="score-visual"></p>
+                <p class="ps-1 m-0 text-body-secondary">/ 100</p>
+              </div>
+            </div>
           </div>
-          <div
-            class="btn outlined rounded-pill d-flex justify-content-center mt-5"
-          >
-            Continue
+
+          <div class="d-grid mt-4">
+            <button type="button" class="btn rounded-pill py-2" id="mn-btn">
+              Continue
+            </button>
           </div>
         </div>
       </div>
     </main>
 
-    <!-- <div class="attribution">
+    <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      >. Coded by <a href="https://github.com/llariola00">llariola00</a>.
+    </div>
 
     <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

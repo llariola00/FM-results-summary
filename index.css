@@ -1,3 +1,14 @@
+@media (max-width: 375px) {
+  #title {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
+
 @font-face {
   font-family: 'Hanken Grotesk-Medium';
   src: url(./assets/fonts/static/HankenGrotesk-Medium.ttf);
@@ -9,28 +20,54 @@
   font-size: 18px;
 }
 
-.outlined {
-  outline: 1px solid #ff0000;
-}
-
 .mn-body {
   height: 100vh;
-  background-color: black;
 }
 
 .mn-container {
+  border-radius: 1.5rem;
   width: 650px;
 }
 
+/* START of CSS for the left column  */
+#column-left {
+  border-radius: 1.5rem;
+  background-image: linear-gradient(
+    hsla(252, 100%, 67%, 1),
+    hsl(241, 81%, 54%)
+  );
+  color: hsl(0, 0%, 100%);
+}
+
 .score-circle {
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
   width: 150px;
   height: 150px;
 }
+#score-total {
+  font-size: 48px;
+}
 
+#score-max {
+  margin-top: -10px;
+}
+
+#title,
+#paragraph,
+#score-max {
+  color: hsla(0, 0%, 100%, 50%);
+}
+/* END of CSS for the left column  */
+
+/* START of CSS for the right column  */
 #score-reaction,
 #score-memory,
 #score-verbal,
-#score-visual {
+#score-visual,
+#score-total {
   font-weight: 600;
 }
 
@@ -59,12 +96,24 @@
 }
 
 #stat-visual {
-  color: hsl(166, 100%, 37%);
+  color: hsl(234, 85%, 45%);
 }
 
 .col-visual {
-  background-color: hsla(166, 100%, 37%, 5%);
+  background-color: hsla(234, 85%, 45%, 5%);
 }
+
+#mn-btn {
+  background-color: hsl(224, 30%, 27%);
+  border: none;
+  color: hsl(0, 0%, 100%);
+}
+
+#mn-btn:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+/* END of CSS for the right column  */
 
 .attribution {
   font-size: 11px;
